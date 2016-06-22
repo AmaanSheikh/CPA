@@ -7,30 +7,37 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <StackPanel Background="#FFA0EF8F" >
+    <StackPanel Background="#FFA0EF8F" Orientation="Vertical" ScrollViewer.HorizontalScrollBarVisibility="Auto" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,-66,0,-113" ScrollViewer.VerticalScrollBarVisibility="Auto" Height="819" >
         <TextBlock x:Name="textBlock" TextWrapping="Wrap" Height="28" FontFamily="Corbel" FontSize="24" FontWeight="Bold" Text="                 Citizen Portal App" HorizontalAlignment="Center" Margin="10,30,10,0" Width="340">
             <TextBlock.Foreground>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                    <GradientStop Color="Black" Offset="1"/>
+                    <GradientStop Color="Black" Offset="0.931"/>
                     <GradientStop Color="#FF08A208"/>
                     <GradientStop Color="#FF056F05" Offset="0.787"/>
-                    <GradientStop Color="#FF046204" Offset="0.887"/>
+                    <GradientStop Color="#FF046204" Offset="0.791"/>
                     <GradientStop Color="#FF0FD30F" Offset="0.335"/>
+                    <GradientStop Color="#FFE9FAE9" Offset="0.974"/>
                 </LinearGradientBrush>
             </TextBlock.Foreground>
         </TextBlock>
         <TextBlock x:Name="textBlock_Copy" TextWrapping="Wrap" Height="28" FontFamily="Corbel" FontSize="10" FontWeight="Bold" Text="An E-Government Initiative" Margin="122,0,116,0" HorizontalAlignment="Center" Width="122">
             <TextBlock.Foreground>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                    <GradientStop Color="Black" Offset="1"/>
+                    <GradientStop Color="Black" Offset="0.931"/>
                     <GradientStop Color="#FF08A208"/>
                     <GradientStop Color="#FF056F05" Offset="0.787"/>
-                    <GradientStop Color="#FF046204" Offset="0.887"/>
+                    <GradientStop Color="#FF046204" Offset="0.791"/>
                     <GradientStop Color="#FF0FD30F" Offset="0.335"/>
+                    <GradientStop Color="#FFE9FAE9" Offset="0.974"/>
                 </LinearGradientBrush>
             </TextBlock.Foreground>
         </TextBlock>
-        <TextBlock x:Name="textBlock1" TextWrapping="Wrap" Margin="10,47,20,0">
+        <Rectangle Height="116" Stroke="Black" Margin="122,0,130,0" Width="111">
+            <Rectangle.Fill>
+                <ImageBrush Stretch="Fill" ImageSource="Assets/Square71x71Logo.png"/>
+            </Rectangle.Fill>
+        </Rectangle>
+        <TextBlock x:Name="textBlock1" TextWrapping="Wrap" Margin="10,30,20,0">
         	<Run Text="Name"/>
         	<Run Text=" "/>
         	<Run Text="|"/>
@@ -54,7 +61,45 @@
         	<Run Text="Domicile|"/>
         	<Run Text="ضلع "/>
         </TextBlock>
-        <ComboBox x:Name="comboBox" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="20,0"/>
+        <ComboBox x:Name="cbDistt" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Width="321">
+            <ComboBoxItem Content="Attock | اٹک"/>
+            <ComboBoxItem Content="Bahawalnagar | بھاولنگر"/>
+            <ComboBoxItem Content="Bahawalpur | بھاولپور"/>
+            <ComboBoxItem Content="Bhakkar | بھکر"/>
+            <ComboBoxItem Content="Chakwal | چکول"/>
+            <ComboBoxItem Content="Chiniot | چنیوٹ"/>
+            <ComboBoxItem Content="Dera Ghazi Khan | ڈیرہ غازی خان"/>
+            <ComboBoxItem Content="Faisalabad"/>
+            <ComboBoxItem Content="Gujranwala"/>
+            <ComboBoxItem Content="Gujrat"/>
+            <ComboBoxItem Content="Hafizabad"/>
+            <ComboBoxItem Content="Jhang"/>
+            <ComboBoxItem Content="Jhelum "/>
+            <ComboBoxItem Content="Kasur"/>
+            <ComboBoxItem Content="Khanewal"/>
+            <ComboBoxItem Content="Khushab"/>
+            <ComboBoxItem Content="Lahore"/>
+            <ComboBoxItem Content="Layyah"/>
+            <ComboBoxItem Content="Lodhran"/>
+            <ComboBoxItem Content="Mandi Bahauddin"/>
+            <ComboBoxItem Content="Mianwali"/>
+            <ComboBoxItem Content="Multan"/>
+            <ComboBoxItem Content="Muzaffargarh"/>
+            <ComboBoxItem Content="Narowal"/>
+            <ComboBoxItem Content="Nankana Sahib "/>
+            <ComboBoxItem Content="Okara"/>
+            <ComboBoxItem Content="Pakpattan"/>
+            <ComboBoxItem Content="Rahim Yar Khan"/>
+            <ComboBoxItem Content="Rajanpur"/>
+            <ComboBoxItem Content="Rawalpindi"/>
+            <ComboBoxItem Content="Sahiwal "/>
+            <ComboBoxItem Content="Sargodha"/>
+            <ComboBoxItem Content="Sheikhupura"/>
+            <ComboBoxItem Content="Sialkot"/>
+            <ComboBoxItem Content="Toba Tek Singh"/>
+            <ComboBoxItem Content="Vehari"/>
+            <ComboBoxItem/>
+        </ComboBox>
         <TextBlock x:Name="textBlock4" TextWrapping="Wrap" Margin="10,0,20,0">
         	<Run Text="Mobi"/>
         	<Run Text="le"/>
@@ -81,5 +126,17 @@
         	<Run Text=" پاسورڈ کی تصدیق"/>
         </TextBlock>
         <TextBox x:Name="textBox5" TextWrapping="Wrap" Text="" Margin="20,0"/>
+        <StackPanel Height="67" Width="353" Orientation="Horizontal" Margin="0,10,0,0">
+            <Button x:Name="button1" Content="Submit" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="20,18.906,0,19.142" Padding="8,4,8,1" Width="128" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto" Background="#334FE808">
+                <Button.RenderTransform>
+                    <CompositeTransform SkewY="-0.208" TranslateY="-0.246"/>
+                </Button.RenderTransform>
+            </Button>
+            <Button x:Name="button1_Copy" Content="Back" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="50,18.898,0,19.15" Padding="8,4,8,1" Width="128" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto" Background="#334FE808">
+                <Button.RenderTransform>
+                    <CompositeTransform SkewY="-0.208" TranslateY="-0.246"/>
+                </Button.RenderTransform>
+            </Button>
+        </StackPanel>
     </StackPanel>
 </Page>
