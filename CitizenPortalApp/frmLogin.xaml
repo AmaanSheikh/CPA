@@ -30,18 +30,22 @@
                 </LinearGradientBrush>
             </TextBlock.Foreground>
         </TextBlock>
-        <Rectangle Height="116" Stroke="Black" Width="111">
-            <Rectangle.Fill>
-                <ImageBrush Stretch="Fill" ImageSource="Assets/Square71x71Logo.png"/>
-            </Rectangle.Fill>
-        </Rectangle>
-        <TextBlock x:Name="textBlock1" TextWrapping="Wrap" Text="User Name" Margin="5,119,0,-15" HorizontalAlignment="Left" FontWeight="Bold" Width="99"/>
-        <TextBox x:Name="textBox" TextWrapping="Wrap" Text="" Margin="5,20,10,-15" PlaceholderText="Enter User Name"/>
+        <Image x:Name="image" Height="100" Width="100" Source="images/LogoA.png"/>
+        <TextBlock x:Name="textBlock1" TextWrapping="Wrap" Text="User Name" Margin="5,75,0,-15" HorizontalAlignment="Left" FontWeight="Bold" Width="99"/>
+        <TextBox x:Name="txtName" TextWrapping="Wrap" Text="" Margin="5,20,10,-15" PlaceholderText="Enter User Name"/>
         <TextBlock x:Name="textBlock1_Copy" TextWrapping="Wrap" Text="Password" Margin="5,30,0,-16" HorizontalAlignment="Left" FontWeight="Bold" Width="99"/>
-        <PasswordBox x:Name="passwordBox" Margin="5,20,9,0" PlaceholderText="Enter Password"/>
-        <Button x:Name="button" Content="Login" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="100,30,86,0" Background="#338B8B8B" ClickMode="Hover" FontWeight="Bold"/>
+        <PasswordBox x:Name="txtpass" Margin="5,20,9,0" PlaceholderText="Enter Password"/>
+        <StackPanel Height="52" Width="343" Orientation="Horizontal" HorizontalAlignment="Center">
+            <CheckBox x:Name="checkBox" Content="Remember Me" HorizontalAlignment="Left" VerticalAlignment="Top" Width="144" Height="22"/>
+            <TextBlock x:Name="textBlock2_Copy" TextWrapping="Wrap" Text="Forget Password?" HorizontalAlignment="Center" Width="116" Margin="75,6,0,30" VerticalAlignment="Center"/>
+
+        </StackPanel>
+        <Button x:Name="button" Content="Login" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="100,30,86,0" Background="#338B8B8B" ClickMode="Hover" FontWeight="Bold" Click="button_Click"/>
         <Path Data="M-1.33333,490.667" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="0" Margin="-1.333,0,0,0" Stretch="Fill" Stroke="Black" UseLayoutRounding="False" Width="0"/>
-        <TextBlock x:Name="textBlock2" TextWrapping="Wrap" Text="New User? Click me.!" HorizontalAlignment="Center" Width="147" Margin="5,15,0,0" VerticalAlignment="Center"/>
+        <TextBlock x:Name="textBlock2" TextWrapping="Wrap" Text="New User? Click me.!" HorizontalAlignment="Center" Width="147" Margin="5,15,0,0" VerticalAlignment="Center" Tapped="textBlock2_Tapped"/>
         <TextBlock x:Name="textBlock3" TextWrapping="Wrap" Text="All Rights Reserved" Foreground="#FF1BC700" Margin="0,120,0,0" HorizontalAlignment="Right" FontStyle="Italic"/>
+        
+
+
     </StackPanel>
 </Page>

@@ -26,5 +26,26 @@ namespace CitizenPortalApp
         {
             this.InitializeComponent();
         }
+
+        private void Hamburger_Click(object sender, RoutedEventArgs e)
+        {
+            MySpllitView.IsPaneOpen = !MySpllitView.IsPaneOpen;
+            
+        }
+
+        private void IconsListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
+
+        private void ListBoxItem_Tapped(object sender, TappedRoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(MainPage));
+        }
+
+        private void ListBoxItem_Tapped_1(object sender, TappedRoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(frmComplaint));
+        }
     }
 }

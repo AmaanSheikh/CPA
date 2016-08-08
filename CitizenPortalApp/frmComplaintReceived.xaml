@@ -1,0 +1,30 @@
+﻿<Page
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:CitizenPortalApp"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:Maps="using:Windows.UI.Xaml.Controls.Maps"
+    x:Class="CitizenPortalApp.frmComplaintReceived"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <StackPanel Background="#FFA0EF8F" >
+
+            <ListBox Height="141" Margin="0,0,1,0">
+                <ListBoxItem x:Name="Title" Content="Application#" FontSize="18" HorizontalAlignment="Center" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" Width="359.965" d:LayoutRounding="Auto" Foreground="#FFF7F7F7" Background="#FF62B96E" Height="50.952">
+                    <ListBoxItem.RenderTransform>
+                        <CompositeTransform SkewY="1.042" TranslateY="0.982" Rotation="-0.924"/>
+                    </ListBoxItem.RenderTransform>
+                </ListBoxItem>
+                <TextBlock x:Name="distt" Text="District" FontSize="36" Height="44" Width="272"/>
+                <TextBlock x:Name="depart" Text="Department" FontSize="15" Margin="0,-20,0,0" Height="27" Width="256"></TextBlock>
+            </ListBox>
+            <TextBox x:Name="txtComplain" TextWrapping="Wrap" Text="TextBox" Height="100" IsReadOnly="True" BorderThickness="2" Margin="0,10,0,0"/>
+            <Maps:MapControl x:Name="myMap" Height="150" BorderThickness="0,10,0,0"/>
+            <Image x:Name="imageUI" Height="100"/>
+            <Button x:Name="button" Content="Get Data" HorizontalAlignment="Center" Margin="148,0,94,0" Width="118" Background="#333C531B" Click="button_Click"/>
+            <TextBlock x:Name="textBlock" TextWrapping="Wrap" Text="TextBlock"/>
+        </StackPanel>
+    </Grid>
+</Page>

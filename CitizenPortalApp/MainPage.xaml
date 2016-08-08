@@ -5,9 +5,85 @@
     xmlns:local="using:CitizenPortalApp"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    mc:Ignorable="d">
+    mc:Ignorable="d" Width="325.333">
+    <Page.Resources>
+        <Color x:Key="Color1">#FF30C70F</Color>
+    </Page.Resources>
 
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <Grid Background="#FF6FB456" HorizontalAlignment="Left" Margin="0,0,-50.667,0" Width="360" Height="608">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="5.333"/>
+            <RowDefinition Height="29"/>
+            <RowDefinition/>
+
+
+        </Grid.RowDefinitions>
+        <Grid Margin="10,-0.333,10,34" d:LayoutOverrides="TopMargin, BottomMargin, LeftPosition, RightPosition, TopPosition, BottomPosition" Grid.Row="2">
+            <Grid x:Name="centerGrid" d:LayoutOverrides="LeftPosition, RightPosition, TopPosition, BottomPosition" Margin="54,53,43,147" Background="#FF61B043" ScrollViewer.HorizontalScrollBarVisibility="Auto" RequestedTheme="Dark" BorderBrush="#FF3E811F" BorderThickness="0,25,0,50">
+                <Button x:Name="btnAnnouncment" Content="&#xE12A;" HorizontalAlignment="Right" Height="73" Margin="0,178,10,0" VerticalAlignment="Top" FontFamily="Segoe MDL2 Assets" Width="112" FontSize="26.667"/>
+                <Button x:Name="btn" Content="Button" HorizontalAlignment="Left" Height="73" Margin="-2,178,0,0" VerticalAlignment="Top" d:LayoutOverrides="Width" Width="115"/>
+                <Button x:Name="btnComplain" HorizontalAlignment="Right" Height="73" Margin="0,75,127,0" VerticalAlignment="Top" Width="115" FontFamily="Segoe MDL2 Assets" Content="&#xEB7E;"/>
+                <Button x:Name="btnPoll" Content="Button" HorizontalAlignment="Right" Height="73" Margin="0,75,10,0" VerticalAlignment="Top" Width="112" d:LayoutOverrides="HorizontalAlignment, VerticalAlignment"/>
+            </Grid>
+            <RelativePanel d:LayoutOverrides="LeftMargin, RightMargin, TopMargin, BottomMargin" HorizontalAlignment="Left" Width="49" Grid.RowSpan="2" Margin="0,0,0,0.333">
+                <Button x:Name="Hamburger" FontFamily="Segoe MDL2 Assets" FontSize="20" Content="&#xE700;" Click="Hamburger_Click" Margin="0,-33,-8,32" Width="48" Background="#FF6FB456" Height="33" RenderTransformOrigin="0.5,0.5">
+                    <Button.RenderTransform>
+                        <CompositeTransform ScaleY="-1"/>
+                    </Button.RenderTransform>
+                </Button>
+            </RelativePanel>
+            <SplitView x:Name="MySpllitView" Grid.Row="2" DisplayMode="CompactOverlay" OpenPaneLength="200" CompactPaneLength="50" Margin="-1,-5.333,0,5" HorizontalAlignment="Left" Width="142" d:LayoutOverrides="HorizontalAlignment, TopMargin, BottomMargin">
+                <SplitView.Pane>
+                    <ListBox SelectionMode="Single" x:Name="IconsListBox" SelectionChanged="IconsListBox_SelectionChanged" Margin="0,0,31,0.333" Background="#FF6FB456" TabNavigation="Cycle" >
+                        <ListBoxItem Tapped="ListBoxItem_Tapped">
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock FontFamily="Segoe MDL2 Assets" FontSize="20" Text="&#xE10F;"/>
+                                <TextBlock Text="Home" FontSize="15" Margin="20,0,0,0"/>
+
+                            </StackPanel>
+
+                        </ListBoxItem>
+                        <ListBoxItem Tapped="ListBoxItem_Tapped_1">
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock FontFamily="Segoe MDL2 Assets" FontSize="20" Text="&#xEB7E;"/>
+                                <TextBlock Text="Compliant" FontSize="15" Margin="20,0,0,0"/>
+
+                            </StackPanel>
+                        </ListBoxItem>
+                        <ListBoxItem>
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock FontFamily="Segoe MDL2 Assets" FontSize="20" Text="&#xEC24;"/>
+                                <TextBlock Text="Announcments" FontSize="15" Margin="20,0,0,0"/>
+
+                            </StackPanel>
+                        </ListBoxItem>
+                        <ListBoxItem>
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock FontFamily="Segoe MDL2 Assets" FontSize="20" Text="&#xE715;"/>
+                                <TextBlock Text="Contact Us" FontSize="15" Margin="20,0,0,0"/>
+
+                            </StackPanel>
+                        </ListBoxItem>
+
+                        <ListBoxItem>
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock FontFamily="Segoe MDL2 Assets" FontSize="20" Text="&#xE72B;"/>
+                                <TextBlock Text="Back" FontSize="15" Margin="20,0,0,0"/>
+
+                            </StackPanel>
+                        </ListBoxItem>
+
+                    </ListBox>
+                </SplitView.Pane>
+
+            </SplitView>
+        </Grid>
+        <Border BorderBrush="Black" Margin="55,9.667,10,-10.667" Grid.Row="1" Background="#33FFFFFF" d:LayoutOverrides="LeftPosition, RightPosition, TopPosition, BottomPosition">
+            <TextBlock x:Name="textBlock" TextWrapping="Wrap"  Text= "Home" HorizontalAlignment="Center" FontSize="21.333" FontWeight="Light" FontFamily="Nafees Web Naskh" Margin="17,0,16,9" FontStretch="SemiExpanded"/>
+        </Border>
+
+        <TextBlock x:Name="textBlock1" Margin="87,52.667,156,0" Grid.Row="2" TextWrapping="Wrap" Text="Welcome" VerticalAlignment="Top" d:LayoutOverrides="Width, LeftPosition, RightPosition" FontWeight="Bold" FontSize="18.667"/>
+
 
     </Grid>
 </Page>

@@ -27,6 +27,21 @@ namespace CitizenPortalApp
             this.InitializeComponent();
         }
 
-        
+        private void button_Click(object sender, RoutedEventArgs e)
+        {
+            if(txtName.Text=="amaan" && txtpass.Password=="123" )
+            {
+                Frame.Navigate(typeof(MainPage));
+            }
+            else
+            {
+                textBlock2.Text = "Invalid username or password";
+            }
+        }
+
+        private void textBlock2_Tapped(object sender, TappedRoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(frmSignUp));
+        }
     }
 }
